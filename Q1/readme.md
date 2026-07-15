@@ -1,0 +1,3 @@
+Methodology: Ingested the standard BGR baseline from low_light.jpg and mapped matrices to Grayscale, HSV, and RGB arrays via cv2.cvtColor.
+
+Engineering Observations: In highly underexposed scenes, the Value (V) channel of the HSV mapping preserves structural edge boundaries better than raw color spaces or the composite Grayscale image. Because color perception (Hue/Saturation) degrades fast under low Signal-to-Noise Ratios (SNR), isolating pure luminous intensity values allows the system to emphasize gradients and spatial outlines without processing chrominance noise.
